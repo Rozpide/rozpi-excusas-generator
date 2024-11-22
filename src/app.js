@@ -26,4 +26,8 @@ function generateExcuse() {
 window.onload = function() {
   document.getElementById("excuse").innerHTML = generateExcuse();
   console.log("Hello Rigo from the console!");
+
+  document.getElementById("generate-excuse-button").onclick = function() {
+    document.getElementById("excuse").innerHTML = generateExcuse();
+  };
 };
