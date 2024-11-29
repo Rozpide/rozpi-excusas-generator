@@ -15,13 +15,13 @@ const when = [
   "during my lunch",
   "while I was praying"
 ];
-//crear una funcion que sea generica para hacer random y obtenga un elemento de un array
+//crear una funcion que sea generica para hacer random y obtener un elemento de un array
 function getRandomElement(array) {
   return array[Math.floor(Math.random() * array.length)];
 }
 
 //funcion para generar una excusa  llamando a la anterior getRandomElement
-function generateExcuseElement() {
+/*function generateExcuseElement() {
   let whoRandomItem = getRandomElement(who);
   let actionRandomItem = getRandomElement(action);
   let whatRandomItem = getRandomElement(what);
@@ -36,6 +36,12 @@ function generateExcuseElement() {
     "" +
     whenRandomItem
   );
+}*/
+// nueva refactorizacion de los random item
+function generateExcuseElement() {
+  return `${getRandomElement(who)}${getRandomElement(action)}${getRandomElement(
+    what
+  )}${getRandomElement(when)}`;
 }
 //funcion para actualizar la excusa en la pagina
 function updateExcuse() {
