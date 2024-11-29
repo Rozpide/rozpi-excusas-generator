@@ -21,20 +21,28 @@ function getRandomElement(array) {
 }
 
 //funcion para generar una excusa  llamando a la anterior getRandomElement
-function generateExcuse() {
-  let whoRandom = getRandomElement(who);
-  let actionRandom = getRandomElement(action);
-  let whatRandom = getRandomElement(what);
-  let whenRandom = getRandomElement(when);
+function generateExcuseElement() {
+  let whoRandomItem = getRandomElement(who);
+  let actionRandomItem = getRandomElement(action);
+  let whatRandomItem = getRandomElement(what);
+  let whenRandomItem = getRandomElement(when);
   // aqui utilizo una manera diferente de concatenar
-  return whoRandom + "" + actionRandom + "" + whatRandom + "" + whenRandom;
+  return (
+    whoRandomItem +
+    "" +
+    actionRandomItem +
+    "" +
+    whatRandomItem +
+    "" +
+    whenRandomItem
+  );
 }
 //funcion para actualizar la excusa en la pagina
 function updateExcuse() {
-  document.getElementById("excuse").innerHTML = generateExcuse();
+  document.getElementById("excuse").innerHTML = generateExcuseElement();
 }
 
-//inicializar el comportamiento de la pagina al cargar
+//inicializar la pagina al cargar
 window.onload = function() {
   updateExcuse();
   console.log("Hello Rigo from the console!!");
