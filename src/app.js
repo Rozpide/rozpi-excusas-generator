@@ -5,7 +5,7 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-const who = ["The dog", "My grandma", "The mailman", "My bird"];
+const who = ["The dog", "My Grandma", "The mailman", "My bird"];
 const action = ["ate", "peed", "crushed", "broke"];
 const what = ["my homework", "my phone", "the car"];
 const when = [
